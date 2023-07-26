@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{68C15948-682D-4286-94F1-1BE430CAFDB5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{B393DD0B-5735-452B-BFD1-F5C11C9D6F49}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "certs", "certs", "{620CA238-6A08-42E6-9EE4-94F2CD500905}"
+	ProjectSection(SolutionItems) = preProject
+		certs\tristesse.pfx = certs\tristesse.pfx
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docker", "docker", "{B35416D5-A1BC-4F83-8D03-6C3153BD1AB8}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker\docker-compose.dcproj", "{17302E80-C2B1-47C7-8983-F9BCAD62AAC9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bandit.NSI.Daemon", "src\Bandit.NSI.Daemon\Bandit.NSI.Daemon.csproj", "{38A139CD-68E1-4473-A903-CCAA4DCEECB2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bandit.NSI.AuthNpgsqlRepository", "src\Bandit.NSI.AuthNpgsqlRepository\Bandit.NSI.AuthNpgsqlRepository.csproj", "{CEA49B03-F40A-4345-8451-DB81390F9BAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandit.NSI.TempNpgsqlRepository", "src\Bandit.NSI.TempNpgsqlRepository\Bandit.NSI.TempNpgsqlRepository.csproj", "{777CB062-A1A6-414B-928D-9D0E8D3BD8A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bandit.NSI.DecisNpgsqlRepository", "src\Bandit.NSI.DecisNpgsqlRepository\Bandit.NSI.DecisNpgsqlRepository.csproj", "{C8791AF9-0F90-460C-9574-10D2DD4745DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17302E80-C2B1-47C7-8983-F9BCAD62AAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17302E80-C2B1-47C7-8983-F9BCAD62AAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17302E80-C2B1-47C7-8983-F9BCAD62AAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17302E80-C2B1-47C7-8983-F9BCAD62AAC9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38A139CD-68E1-4473-A903-CCAA4DCEECB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38A139CD-68E1-4473-A903-CCAA4DCEECB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38A139CD-68E1-4473-A903-CCAA4DCEECB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38A139CD-68E1-4473-A903-CCAA4DCEECB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEA49B03-F40A-4345-8451-DB81390F9BAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEA49B03-F40A-4345-8451-DB81390F9BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEA49B03-F40A-4345-8451-DB81390F9BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEA49B03-F40A-4345-8451-DB81390F9BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{777CB062-A1A6-414B-928D-9D0E8D3BD8A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{777CB062-A1A6-414B-928D-9D0E8D3BD8A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{777CB062-A1A6-414B-928D-9D0E8D3BD8A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{777CB062-A1A6-414B-928D-9D0E8D3BD8A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8791AF9-0F90-460C-9574-10D2DD4745DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8791AF9-0F90-460C-9574-10D2DD4745DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8791AF9-0F90-460C-9574-10D2DD4745DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8791AF9-0F90-460C-9574-10D2DD4745DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17302E80-C2B1-47C7-8983-F9BCAD62AAC9} = {B35416D5-A1BC-4F83-8D03-6C3153BD1AB8}
+		{38A139CD-68E1-4473-A903-CCAA4DCEECB2} = {68C15948-682D-4286-94F1-1BE430CAFDB5}
+		{CEA49B03-F40A-4345-8451-DB81390F9BAC} = {68C15948-682D-4286-94F1-1BE430CAFDB5}
+		{777CB062-A1A6-414B-928D-9D0E8D3BD8A7} = {68C15948-682D-4286-94F1-1BE430CAFDB5}
+		{C8791AF9-0F90-460C-9574-10D2DD4745DC} = {68C15948-682D-4286-94F1-1BE430CAFDB5}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C88D9626-C0AD-485A-BCC1-FAE331FC1DC9}
+	EndGlobalSection
+EndGlobal

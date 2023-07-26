@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+
+  bandit-nsi:
+    image: bandit-nsi
+    build:
+      context: ..
+      dockerfile: src/Bandit.NSI.Daemon/Dockerfile
+    ports:
+      - 7000:443
+    environment:
+      NSI__TempDatabase__DatabaseName: "bandit-nsi-temp"
+      NSI__TempDatabase__ConnectionString: "User ID=bandit;Password=orF9YuPWVajej5tC6cfiro94BoxrzsoE;Host=postgres;Port=5432;Database=bandit-nsi-temp;Connection Lifetime=0;"
+      NSI__DecisDatabase__DatabaseName: "bandit-nsi-decis"
+      NSI__DecisDatabase__ConnectionString: "User ID=bandit;Password=orF9YuPWVajej5tC6cfiro94BoxrzsoE;Host=postgres;Port=5432;Database=bandit-nsi-decis;Connection Lifetime=0;"
+      NSI__AuthDatabase__DatabaseName: "bandit-nsi-auth"
+      NSI__AuthDatabase__ConnectionString: "User ID=bandit;Password=orF9YuPWVajej5tC6cfiro94BoxrzsoE;Host=postgres;Port=5432;Database=bandit-nsi-auth;Connection Lifetime=0;"
+      NSI__JWT__LifeSpan: 120
+      NSI__JWT__Key: ""
+      NSI__JWT__Issuer: ""
+      NSI__JWT__Audience: ""
+      NSI__API__Title: "Development NSI API"
+      NSI__API__Description: "This page provides an interactive documentation of the development NSI API."
+      NSI__API__ErrorDocumentationUri: "https://github.com/TristesseLOL/bandit-nsi/blob/master/documentation/errors.md#"
+      ASPNETCORE_URLS: "https://+:443;"
+      ASPNETCORE_Kestrel__Certificates__Default__Path: "/certs/tristesse.pfx"
+      Logging__LogLevel__Default: "Debug"
+    depends_on:
+      - postgres
+    volumes:
+      - ../certs/:/certs/
+    networks:
+      - datalab
+
+  postgres:
+    image: postgres:15.2-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=bandit 
+      - POSTGRES_PASSWORD=orF9YuPWVajej5tC6cfiro94BoxrzsoE
+    ports:
+      - '5432:5432'
+    networks:
+      - datalab
+
+networks: 
+  datalab:
+    name: datalab
+

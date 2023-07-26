@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Docker Compose": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "serviceActions": {
+        "bandit-nsi": "StartDebugging",
+        "postgres": "StartWithoutDebugging",
+        "mongo": "StartWithoutDebugging"
+      }
+    }
+  }
+}
